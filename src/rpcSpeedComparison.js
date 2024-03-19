@@ -115,7 +115,7 @@ async function setListCount() {
  }
 // Creates an array of objects from json file.
 async function createRPCList() {
-  let response = await fetch('/assets/rpc-list.json')
+  let response = await fetch('assets/rpc-list.json')
   let data = await response.json()
   let output = []
   data.forEach((e) => {
@@ -123,7 +123,7 @@ async function createRPCList() {
     e.rpcn = e.rpcn.toUpperCase()
     output.push(e)
   })
-  response = await fetch('/assets/rpc-list.json')
+  response = await fetch('assets/rpc-list.json')
   data = await response.json()
   data.forEach((e) => {
     e.address = 'https://' + e.address

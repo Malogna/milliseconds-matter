@@ -80,7 +80,7 @@ async function textOutputMain() {
         }
     }
     async function getTextFromFile(fileName) {
-        var response = await fetch(`/assets/${fileName}`);
+        var response = await fetch(`assets/${fileName}`);
         let aboutFile = await response.text()
         return aboutFile
     }
@@ -123,7 +123,7 @@ function runCommand(cmd) {
             toggleKeyboard()
             break
         case 'about':
-            window.location.href = '/pages/about'
+            window.location.href = 'pages/about'
             terminal.write('\r\n')
             break
         case 'rpc-speed-comparison':
